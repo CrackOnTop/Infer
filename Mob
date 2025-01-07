@@ -61,9 +61,7 @@ local InterfaceManager = {} do
 
 		InterfaceManager:LoadSettings()
 
-		local section = tab:AddSection("")
-
-		local InterfaceTheme = section:AddDropdown("InterfaceTheme", {
+		local InterfaceTheme = tab:AddDropdown("InterfaceTheme", {
 			Title = "Đổi Màu Nền",
 			Description = "",
 			Values = Library.Themes,
@@ -78,7 +76,7 @@ local InterfaceManager = {} do
 		InterfaceTheme:SetValue(Settings.Theme)
 
 		if Library.UseAcrylic then
-			section:AddToggle("AcrylicToggle", {
+			tab:AddToggle("AcrylicToggle", {
 				Title = "Nền Mờ",
 				Description = "",
 				Default = Settings.Acrylic,
@@ -90,7 +88,7 @@ local InterfaceManager = {} do
 			})
 		end
 
-		section:AddToggle("TransparentToggle", {
+		tab:AddToggle("TransparentToggle", {
 			Title = "Nền Trong Suốt",
 			Description = "",
 			Default = Settings.Transparency,
